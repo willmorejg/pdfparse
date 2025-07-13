@@ -2,6 +2,8 @@
 
 A Python package for parsing PDF documents.
 
+NOTE: this was a vibe coding effort using GitHub Copilot (Claude Sonnet 4 Agent)
+
 ## Installation
 
 ```bash
