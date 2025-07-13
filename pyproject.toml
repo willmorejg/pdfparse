@@ -5,12 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pdfparse"
 dynamic = ["version"]
-authors = [
-    {name = "James G Willmore", email = "willmorejg@gmail.com"},
-]
-maintainers = [
-    {name = "James G Willmore", email = "willmorejg@gmail.com"},
-]
+authors = [{ name = "James G Willmore", email = "willmorejg@gmail.com" }]
+maintainers = [{ name = "James G Willmore", email = "willmorejg@gmail.com" }]
 description = "A Python package for parsing PDF documents"
 readme = "README.md"
 license = "Apache-2.0"
@@ -46,6 +42,10 @@ dependencies = [
     # Optional: for enhanced CSS support
     "cssselect>=1.2.0",
     "html5lib>=1.1",
+    # PDF parsing backends
+    "pypdf>=4.0.0",
+    "pdfplumber>=0.10.0",
+    "pymupdf>=1.23.0",
 ]
 
 [project.urls]
@@ -71,22 +71,14 @@ dev = [
     "wheel",
     "pdoc",
 ]
-docs = [
-    "sphinx",
-    "sphinx-rtd-theme",
-    "pdoc",
-]
-test = [
-    "pytest>=6.0",
-    "pytest-cov",
-    "pytest-mock",
-]
+docs = ["sphinx", "sphinx-rtd-theme", "pdoc"]
+test = ["pytest>=6.0", "pytest-cov", "pytest-mock"]
 
 [project.scripts]
 pdfparse = "pdfparse.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 include-package-data = true
 zip-safe = false
 
@@ -97,7 +89,7 @@ where = ["src"]
 pdfparse = ["data/*.json", "templates/*.html"]
 
 [tool.setuptools.dynamic]
-version = {attr = "pdfparse.__version__"}
+version = { attr = "pdfparse.__version__" }
 
 # Development tools configuration that work better in pyproject.toml
 [tool.black]
@@ -141,9 +133,7 @@ tag = true
 push = false
 
 [tool.bumpver.file_patterns]
-"src/pdfparse/__init__.py" = [
-    "__version__ = '{version}'",
-]
+"src/pdfparse/__init__.py" = ["__version__ = '{version}'"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
@@ -157,11 +147,7 @@ markers = [
 
 [tool.coverage.run]
 source = ["src"]
-omit = [
-    "*/tests/*",
-    "*/test_*",
-    "*/__pycache__/*",
-]
+omit = ["*/tests/*", "*/test_*", "*/__pycache__/*"]
 
 [tool.coverage.report]
 exclude_lines = [

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test PDF Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .metadata {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PDF Parser Test Document</h1>
+
+    <div class="metadata">
+        <strong>Document Information:</strong><br>
+        Created: 2025-07-13<br>
+        Purpose: Testing PDF text extraction<br>
+        Author: PDF Parse Test Suite
+    </div>
+
+    <h2>Introduction</h2>
+    <p>This is a test document created specifically for testing PDF text extraction capabilities. It contains various
+        types of content including headers, paragraphs, lists, and tables.</p>
+
+    <h2>Features to Test</h2>
+    <ul>
+        <li>Basic text extraction</li>
+        <li>Header recognition</li>
+        <li>List processing</li>
+        <li>Table data extraction</li>
+        <li>Multi-page documents</li>
+        <li>Special characters and Unicode: àáâãäåæçèéêëìíîï</li>
+    </ul>
+
+    <h2>Sample Data Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Backend</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Text Extraction</td>
+                <td>PyPDF</td>
+                <td>Supported</td>
+            </tr>
+            <tr>
+                <td>Text Extraction</td>
+                <td>pdfplumber</td>
+                <td>Supported</td>
+            </tr>
+            <tr>
+                <td>Text Extraction</td>
+                <td>PyMuPDF</td>
+                <td>Supported</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-break">
+        <h1>Second Page Content</h1>
+
+        <h2>Advanced Features</h2>
+        <p>This second page tests multi-page document handling and ensures that page-by-page extraction works correctly.
+        </p>
+
+        <h2>Search Test Content</h2>
+        <p>This paragraph contains the word "searchable" which can be used to test text search functionality. The word
+            appears multiple times: searchable content, searchable text, and searchable documents.</p>
+
+        <h2>Numbers and Dates</h2>
+        <p>Testing number extraction: 12345, 67.89, $123.45, and dates like 2025-07-13 or July 13, 2025.</p>
+
+        <h2>Conclusion</h2>
+        <p>This test document provides comprehensive content for validating PDF text extraction across different
+            backends and use cases.</p>
+    </div>
+</body>
+
+</html>

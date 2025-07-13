@@ -2,9 +2,10 @@
 Pytest configuration and shared fixtures for pdfparse tests.
 """
 
-import pytest
 import sys
 from pathlib import Path
+
+import pytest
 
 # Add src directory to path so we can import pdfparse modules
 src_dir = Path(__file__).parent.parent / "src"
@@ -32,7 +33,7 @@ def test_data_directory():
     return Path(__file__).parent / "test_data"
 
 
-@pytest.fixture(scope="session") 
+@pytest.fixture(scope="session")
 def example_html():
     """Provide the example HTML file path."""
     test_data_dir = Path(__file__).parent / "test_data"
