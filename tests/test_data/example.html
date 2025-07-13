@@ -1,0 +1,135 @@
+<!--
+ Copyright 2025 James G Willmore
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     https://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0066cc;
+            margin-top: 30px;
+        }
+        .highlight {
+            background-color: #ffff99;
+            padding: 2px 4px;
+        }
+        .info-box {
+            background-color: #f0f8ff;
+            border: 1px solid #0066cc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML to PDF Conversion Test</h1>
+    
+    <p>This is a sample HTML document to test the HTML to PDF conversion functionality. 
+    It includes various HTML elements and CSS styling to demonstrate the capabilities 
+    of different PDF generation backends.</p>
+    
+    <h2>Features Demonstrated</h2>
+    
+    <ul>
+        <li>Text formatting with <strong>bold</strong> and <em>italic</em> text</li>
+        <li><span class="highlight">Highlighted text</span> with background colors</li>
+        <li>Ordered and unordered lists</li>
+        <li>Tables with styling</li>
+        <li>Custom CSS classes and styling</li>
+    </ul>
+    
+    <div class="info-box">
+        <h3>Information Box</h3>
+        <p>This is an example of a styled information box with custom CSS. 
+        It demonstrates how CSS styling is preserved during PDF conversion.</p>
+    </div>
+    
+    <h2>Sample Table</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Backend</th>
+                <th>CSS Support</th>
+                <th>Ease of Use</th>
+                <th>Dependencies</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>WeasyPrint</td>
+                <td>Excellent</td>
+                <td>High</td>
+                <td>Python only</td>
+            </tr>
+            <tr>
+                <td>PDFKit</td>
+                <td>Good</td>
+                <td>Medium</td>
+                <td>Requires wkhtmltopdf</td>
+            </tr>
+            <tr>
+                <td>ReportLab</td>
+                <td>Limited</td>
+                <td>Low</td>
+                <td>Python only</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Code Example</h2>
+    
+    <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 3px;">
+from html_to_pdf import HTMLToPDFConverter
+
+# Create converter instance
+converter = HTMLToPDFConverter(backend='weasyprint')
+
+# Convert HTML file to PDF
+converter.convert_html_file('input.html', 'output.pdf')
+    </pre>
+    
+    <p>This document serves as a comprehensive test for the HTML to PDF conversion 
+    functionality, ensuring that various HTML elements and CSS styles are properly 
+    rendered in the final PDF output.</p>
+</body>
+</html>
